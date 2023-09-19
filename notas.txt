@@ -1,0 +1,26 @@
+Sequências de comandos API NODE
+
+1 - yarn init -y
+2 - yarn add typescript -D         - Instalação apenas para desenvolvimento
+3 - yarn add express               - Instalação que levanta o servidor NODE
+4 - yarn add @types/express -D     - Verifica a sintax do typescript com o express
+5 - yarn tsc --init                - Inicializa o TypeScript - cria o arquivo tsconfig.json
+6 - yarn add ts-node-dev -D        - Dependência que permite criar escript para levantar servidor NODE
+6 - yarn add express-async-errors  - Biblioteca para tratativa de erros 
+7 - yarn add cors                  - Permite o acesso para qualquer IP fazer requisições na API
+8 - yarn add @types/cors -D        - Instala as tipagens do modulo de cors
+9 - yarn add prisma                - ORM acesso a banco de dados
+10 - yarn add @prisma/client       - Gera registro das migrations do banco de dados 
+11 - npx prisma init               - Inicializar configurações básicas do prisma
+12 - yarn add bcryptjs             - Biblioteca para encryptografar dados
+13 - yarn add @types/bcryptjs -D   - Tipagem para biblioteca bcryptjs
+14 - yarn add jsonwebtoken         - Criação e manipulação de token
+15 - yarn add @types/jsonwebtoken - D    - Instalação da tipagem do jsonwebtoken
+16 - yarn add dotenv               - Lib para acessar dados do arquivo .env
+17 - yarn add multer               - Biblioteca para envio de imagens 
+18 - yarn add @types/multer - D    - Tipagem typescript para lib multer
+
+Arquivos
+
+1- Criar pastar src 
+2 - Criar arquivos server.ts && routes.ts
