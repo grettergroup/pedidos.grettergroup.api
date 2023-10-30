@@ -9,12 +9,9 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
     try{
         if(authToken){
             const [,token] = authToken.split(" ");
-
             const  retorno = verify(token,process.env.JWT_SECRET);
-
             //Colocar id do usuário dentro do request
             req.user_id = retorno.sub.toString();
-
             return next();
         }
         else{

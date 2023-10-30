@@ -5,7 +5,6 @@ class CreateCategoryService{
     async execute(name : string){
         
         if(!name){
-
             throw new Error( "Preencha a categoria")
         }
 

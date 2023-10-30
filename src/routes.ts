@@ -4,10 +4,12 @@ import multer from 'multer';
 import { CreateUserController } from './controllers/user/CreateUserController';
 import { AuthUserController } from './controllers/user/AuthUserController';
 import { DetailUserController } from './controllers/user/DetailUserController';
+
 import { CategoryController } from './controllers/category/CategoryController';
+import { ListCategoryController } from './controllers/category/ListCategoryController';
+import { RemoveCategoryController } from './controllers/category/RemoveCategoryController';
 
 import { isAuthenticated } from './middlewares/isAuthenticated';
-import { ListCategoryController } from './controllers/category/ListCategoryController';
 import { CreateProductController } from './controllers/product/CreateProductController';
 import {ListProductByCategoryController} from './controllers/product/ListProductByCategoryController';
 
@@ -38,6 +40,8 @@ router.get('/detailUser', isAuthenticated, new DetailUserController().handler);
 router.post('/categorie', isAuthenticated, new CategoryController().handler);
 
 router.get('/categorie', isAuthenticated, new ListCategoryController().handler);
+
+router.delete('/categorie/remove', isAuthenticated, new RemoveCategoryController().handler);
 
 //Products
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handler);

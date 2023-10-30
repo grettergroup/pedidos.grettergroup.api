@@ -5,9 +5,9 @@ class ListCategoryController{
     async handler(req: Request, res: Response){
         const listCategoryService = new ListCategoryService();
 
-        const category = await listCategoryService.execute();
+        const listCategory = await listCategoryService.execute();
 
-        return res.json(category);
+        return res.json(listCategory);
        
     }
 }
